@@ -21,9 +21,18 @@ model User{
   posts Post[]
 }
 
+model Category{
+  id Int @id @default(autoincrement())
+  name String
+  post Post @relation(fields: [catId], references: [id])
+  catId Int
+}
+
 model Post{
   id Int @id @default(autoincrement())
   title String
   userId Int
   user User @relation(fields: [userId], references: [id])
+  categorys Category[]
 }
+
