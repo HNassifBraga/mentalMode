@@ -1,0 +1,1 @@
+Use a CI system (e.g. GitHub Actions) to sync your Prisma schema and migration history with your preview database using prisma migrate deploy
